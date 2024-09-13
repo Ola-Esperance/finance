@@ -1,0 +1,26 @@
+<!-- Banner Starts Here -->
+<div class="main-banner header-text" id="top">
+  <div class="Modern-Slider">
+    <!-- Item -->
+    <div
+      *ngFor="let slide of slides | async"
+      [ngStyle]="{ 'background-image': 'url(' + slide.backgroundImage + ')' }"
+      class="item"
+    >
+      <div class="img-fill">
+        <div class="text-content">
+          <h6>{{ slide.subTitle }}</h6>
+          <h4>{{ slide.title }}<br />&amp; {{ slide.titlePlus }}</h4>
+          <p>
+            {{ slide.description }}
+          </p>
+          <a [href]="slide.buttonLink" class="filled-button"
+            >{{ slide.buttonText }} us</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- // Item -->
+  </div>
+</div>
+<!-- Banner Ends Here -->

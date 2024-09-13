@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "thimdash-c009d": {
+      "hosting": {
+        "finance": [
+          "thimdash-c009d"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "thimdash-c009d"
+  }
+}

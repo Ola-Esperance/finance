@@ -1,0 +1,27 @@
+<div class="team">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-heading">
+          <h2>What they say <em>about us</em></h2>
+          <span>testimonials from our greatest clients</span>
+        </div>
+      </div>
+      <div class="col-md-4" *ngFor="let testimony of testimonies | async">
+        <div class="team-item">
+          <img [src]="testimony.imgUrl" alt="" />
+          <div class="down-content">
+            <h4>{{ testimony.name }}</h4>
+            <span>{{ testimony.role }}</span>
+            <p>
+              {{ testimony.description }}
+            </p>
+            <h6>
+              Date:{{ testimony.created.toMillis() | date : "dd/MM/yyyy" }}
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
